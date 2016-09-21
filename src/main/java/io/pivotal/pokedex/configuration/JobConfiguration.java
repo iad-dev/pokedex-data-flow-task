@@ -25,7 +25,7 @@ public class JobConfiguration {
         return jobBuilderFactory.get("pokemon-battle")
                 .start(stepBuilderFactory.get("all-the-things")
                         .tasklet((contribution, chunkContext) -> {
-                            logger.info("Hello, Pallet Town");
+                            logger.info("*********************HELLO***************");
                             return RepeatStatus.FINISHED;
                         })
                         .build()

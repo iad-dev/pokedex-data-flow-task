@@ -23,10 +23,6 @@ jar {
 				'Start-Class': 'io.pivotal.pokedex.PokedexApplication',
 				'Main-Class': 'org.springframework.boot.loader.JarLauncher'
 		)
-
-	}
-	from {
-		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 	}
 }
 sourceCompatibility = 1.8
@@ -36,13 +32,12 @@ repositories {
 	mavenCentral()
 	maven { url "https://repo.spring.io/snapshot" }
 	maven { url "https://repo.spring.io/milestone" }
-	mavenLocal()
 }
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-batch:1.1.0.M1')
-	compile('org.springframework.cloud:spring-cloud-task-starter:1.1.0.M1')
 	compile('org.springframework.boot:spring-boot-loader:1.4.0.RELEASE')
+	compile('org.springframework.cloud:spring-cloud-task-starter:1.1.0.M1')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
