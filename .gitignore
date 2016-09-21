@@ -1,0 +1,11 @@
+.DS_Store
+bin/
+build/
+target/
+.gradle/
+
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+.idea/*
